@@ -24,7 +24,7 @@ const Wip = ({ showButton = true }) => {
             This page is currently under construction, Please check back later.
           </p>
           {showButton && (
-            <a href="/" className="btn btn-primary hover:bg-neutral">
+            <a href="/" className="btn btn-primary hover:bg-secondary">
               Go home
             </a>
           )}
