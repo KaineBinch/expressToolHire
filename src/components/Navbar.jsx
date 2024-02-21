@@ -43,7 +43,7 @@ const Navbar = () => {
       <div className="flex bg-primary justify-center">
         <div className="flex w-full max-w-7xl h-[85px] items-center md:px-[25px] px-[5px] place-content-between">
           <div className="flex">
-            <h1 className="md:visible md:w-auto w-0 invisible  text-white font-black md:text-4xl text-xl md:px-[0px] px-[0px]">
+            <h1 className="md:visible md:w-auto w-0 invisible  text-white font-[ArialBlack] md:text-4xl text-xl md:px-[0px] px-[0px]">
               Express
             </h1>
             <div className="flex md:max-w-[100px] ">
@@ -57,7 +57,7 @@ const Navbar = () => {
               />
             </div>
           </div>
-          <div className="md:invisible visible text-white font-black text-2xl justify-self-center w-full absolute  ">
+          <div className="md:invisible visible text-white font-[ArialBlack] text-2xl justify-self-center w-full absolute  ">
             <h1>Express</h1>
           </div>
           <div className="flex">
@@ -98,7 +98,7 @@ const Navbar = () => {
               <div className="flex place-content-evenly">
                 <ul
                   tabIndex={0}
-                  className="menu dropdown-content ml-32 mt-[12px] p-4 shadow bg-secondary rounded-box w-[200px] font-bold "
+                  className="menu dropdown-content ml-32 mt-[12px] p-4 shadow bg-secondary rounded-box w-[200px] font-bold bg-opacity-90"
                 >
                   {links.map(({ title, to }) =>
                     LinkItem(title, to, location, 5)
@@ -108,12 +108,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex h-[60px] px-[12px] md:visible invisible">
-            <h1 className="text-white font-black md:text-2xl text-md">
+            <h1 className="text-white font-[ArialBlack] md:text-2xl text-md">
               Tool Hire Ltd
             </h1>
           </div>
           <div className="md:invisible visible w-full left-0 flex justify-center h-[60px] absolute">
-            <h1 className="ml-2 text-white font-black md:text-2xl text-lg">
+            <h1 className="ml-2 text-white font-[ArialBlack] md:text-2xl text-lg">
               Tool Hire Ltd
             </h1>
           </div>
