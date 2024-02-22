@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HAE from "../assets/HAElogo.png";
 import OrangeLogo from "../assets/SafeHireLogo.png";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const location = useLocation().pathname;
@@ -19,12 +19,12 @@ const Navbar = () => {
   };
 
   const LinkItem = (title, to, location, my = 1) => {
-    const activeClasses = location === to ? "bg-primary" : "";
+    const activeClasses = location === to ? "bg-secondary" : "";
     return (
       <li
         key={title}
         onClick={loseActiveFocus}
-        className={`rounded-md ${activeClasses} my-${my}`}
+        className={`rounded-t-md ${activeClasses} my-${my}`}
         style={{
           marginTop: my,
           marginBottom: my,
@@ -38,92 +38,68 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-col">
-      {/* Top Navbar */}
-      <div className="flex bg-primary justify-center">
-        <div className="flex w-full max-w-7xl h-[85px] items-center md:px-[25px] px-[5px] place-content-between">
-          <div className="flex">
-            <h1 className="md:visible md:w-auto w-0 invisible  text-white font-[ArialBlack] md:text-4xl text-xl md:px-[0px] px-[0px]">
-              Express
-            </h1>
-            <div className="flex md:max-w-[100px] ">
-              <img
-                src={HAE}
-                className="md:pl-5 md:pr-1 max-w-[30px] max-h-[30px] md:max-w-[100px] md:max-h-[100px]"
-              />
-              <img
-                src={OrangeLogo}
-                className="pl-1 max-w-[50px] max-h-[30px] md:max-w-[100px] md:max-h-[100px]"
-              />
-            </div>
-          </div>
-          <div className="md:invisible visible text-white font-[ArialBlack] text-2xl justify-self-center w-full absolute  ">
-            <h1>Express</h1>
-          </div>
-          <div className="flex">
-            <FontAwesomeIcon
-              icon="fa-solid fa-phone"
-              style={{ color: "#ffffff" }}
-              className="md:text-2xl text-[13px] md:px-[5px] md:mt-[8px] px-[3px] mt-[5px] md:visible invisible"
-            />
-            <h1 className="flex text-sm font-normal text-white md:font-black md:text-3xl ">
-              0115 941 9900
-            </h1>
-          </div>
-        </div>
-      </div>
-      {/* Bottom Navbar */}
-      <div className="flex bg-secondary justify-center">
-        <div className="navbar max-w-7xl h-[60px]">
-          <div className="flex-none">
-            <div className="dropdown md:w-0 w-[64px] visible md:invisible justify-center items-center z-10 ">
-              <label
-                tabIndex={0}
-                className="btn btn-ghost btn-square text-white justify-center items-center "
+    <div className="flex bg-primary justify-center border-b-8 border-secondary">
+      <div className="flex navbar max-w-7xl lg:h-[90px] md:h-[60px] h-[50px] place-content-between">
+        <div className="flex-none">
+          <div className="dropdown visible md:invisible justify-center items-center z-10 md:w-0 w-auto pt-2">
+            <label
+              tabIndex={0}
+              className="btn btn-ghost btn-square text-white justify-center items-center "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill=""
+                viewBox="3 3 20 20"
+                className="inline-block w-5 h-5 stroke-current"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill=""
-                  viewBox="3 3 20 20"
-                  className="inline-block w-5 h-5 stroke-current"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
-                </svg>
-              </label>
-              <div className="flex place-content-evenly">
-                <ul
-                  tabIndex={0}
-                  className="menu dropdown-content ml-32 mt-[12px] p-4 shadow bg-secondary rounded-box w-[200px] font-bold bg-opacity-90"
-                >
-                  {links.map(({ title, to }) =>
-                    LinkItem(title, to, location, 5)
-                  )}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="flex h-[60px] px-[12px] md:visible invisible">
-            <h1 className="text-white font-[ArialBlack] md:text-2xl text-md">
-              Tool Hire Ltd
-            </h1>
-          </div>
-          <div className="md:invisible visible w-full left-0 flex justify-center h-[60px] absolute">
-            <h1 className="ml-2 text-white font-[ArialBlack] md:text-2xl text-lg">
-              Tool Hire Ltd
-            </h1>
-          </div>
-          <div className="flex-1 hidden md:inline-block justify-end ">
-            <div>
-              <ul className="flex menu menu-horizontal invisible md:visible font-bold place-content-evenly">
-                {links.map(({ title, to }) => LinkItem(title, to, location))}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </label>
+            <div className="flex place-content-evenly">
+              <ul
+                tabIndex={0}
+                className="menu dropdown-content ml-[142px] mt-[14px] p-4 shadow bg-secondary rounded-box w-[200px] font-bold"
+              >
+                {links.map(({ title, to }) => LinkItem(title, to, location, 5))}
               </ul>
             </div>
           </div>
+        </div>
+        <div className="md:visible invisible w-0 md:w-auto">
+          <Logo />
+          <div className="flex max-w-[100px] lg:pl-8 pl-2 justify-center pt-5">
+            <img
+              src={HAE}
+              className="pr-1 max-w-[40px] max-h-[40px] lg:max-w-[60px] lg:max-h-[60px]"
+            />
+            <img
+              src={OrangeLogo}
+              className="pl-1 lg:pl-0 max-w-[40px] max-h-[40px] lg:max-w-[60px] lg:max-h-[60px]"
+            />
+          </div>
+        </div>
+        <div className="md:invisible visible pt-2 flex w-full md:w-0 place-content-between">
+          <div className="flex justify-center">
+            <img src={HAE} className=" max-w-[30px] max-h-[30px] " />
+            <img src={OrangeLogo} className="pl-1 max-w-[50px] max-h-[30px]" />
+          </div>
+
+          <h1 className="md:invisible visible flex items-end justify-end text-sm font-normal text-white pr-3">
+            0115 941 9900
+          </h1>
+        </div>
+        <div className="md:invisible visible absolute w-full flex items-center justify-center">
+          <Logo />
+        </div>
+        <div className="h-full hidden md:inline-block flex grow">
+          <ul className="h-full flex menu menu-horizontal invisible md:visible font-bold place-content-evenly lg:pt-16 pt-10">
+            {links.map(({ title, to }) => LinkItem(title, to, location))}
+          </ul>
         </div>
       </div>
     </div>
