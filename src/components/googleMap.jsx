@@ -1,4 +1,5 @@
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import config from "../env.json";
 
 const libraries = ["places"];
 const mapContainerStyle = {
@@ -12,7 +13,7 @@ const center = {
 
 const Map = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCBkyzJ0qQyppBI6u4qlH0W26gs7hq358k",
+    googleMapsApiKey: config.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries,
   });
 
