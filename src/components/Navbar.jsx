@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex bg-primary justify-center border-b-8 border-secondary">
+    <div className="w-screen flex bg-primary justify-center border-b-8 border-secondary">
       <div className="flex navbar max-w-7xl lg:h-[90px] md:h-[60px] h-[50px] place-content-between">
         <div className="flex-none">
           <div className="dropdown visible md:invisible justify-center items-center z-10 md:w-0 w-auto pt-2">
@@ -93,7 +93,7 @@ const Navbar = () => {
             0115 941 9900
           </h1>
         </div>
-        <div className="md:invisible visible absolute w-full flex items-center justify-center">
+        <div className="md:invisible visible absolute w-full left-0 flex items-center justify-center">
           <Logo />
         </div>
         <div className="h-full hidden md:inline-block flex grow">
