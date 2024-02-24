@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slider from "../components/slider";
 import Map from "../components/googleMap";
+import PDF from "../utils/express_pricelist.pdf";
 
 const HomePage = () => {
   return (
@@ -55,7 +56,7 @@ const HomePage = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-1 ml-[10px] mt-[25px]">
+        <div className="flex flex-1 ml-[10px] mt-[25px] pb-[25px]">
           <a href="/#/about" className="btn btn-secondary text-white">
             Learn More
           </a>
@@ -68,11 +69,13 @@ const HomePage = () => {
           </a>
         </div>
       </div>
-      <div className="w-full flex items-center justify-center my-5 mx-5 max-h-[350px] max-w-[350px]">
-        <img
-          src="./src/assets/WackerPlate.png"
-          className="justify-content-center max-h-[350px] max-w-[350px]"
-        />
+      <div className="flex items-center justify-center">
+        <div className="m-5 max-h-[350px] max-w-[350px]">
+          <img
+            src="./src/assets/WackerPlate.png"
+            className="justify-content-center max-h-[350px] max-w-[350px]"
+          />
+        </div>
       </div>
       {/* Services Info */}
       <div className="min-h-[100svh] bg-accent md:flex md:flex-col md:max-w-7xl">
@@ -103,7 +106,7 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <div className="w-auto flex items-center justify-center ">
+      <div className="py-[15px] w-auto flex items-center justify-center ">
         <img
           src="./src/assets/FrontLoader.png"
           className="justify-content-center max-h-[350px] max-w-[350px]"
@@ -182,7 +185,7 @@ const HomePage = () => {
             <a href="/#/products" className="btn btn-secondary text-white px-6">
               Products
             </a>
-            <a href="/#/" className="flex items-center pl-4 ">
+            <a href={PDF} className="flex items-center pl-4 ">
               Full rental catalogue{" "}
               <FontAwesomeIcon
                 icon="fa-solid fa-chevron-right"
@@ -304,7 +307,7 @@ const HomePage = () => {
           />
           <h3 className="font-[arialBlack] text-2xl">Kaine Binch</h3>
           <h4 className="text-md">Director of fun</h4>
-          <p className="text-center text-sm mt-[10px] text-lg mx-[10px]">
+          <p className="text-center text-sm mt-[10px] text-lg pb-[10px] my-[25px]">
             I wanted to put another person on and thought it would be easier to
             use my name than search for people you work with.
           </p>
@@ -345,7 +348,7 @@ const HomePage = () => {
               <a href="/#/" className="mr-6 w-[125px]">
                 Flo-Gas
               </a>
-              <a href="/#/" className="ml-6 w-[125px]">
+              <a href={PDF} className="ml-6 w-[125px]">
                 Rental Catalogue
               </a>
             </div>

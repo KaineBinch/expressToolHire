@@ -8,7 +8,7 @@ const featuredImages = [
 
 const Slider = () => {
   return (
-    <div className="carousel w-full">
+    <div className="py-[15px] carousel w-full">
       <div className="carousel-item w-full">
         {featuredImages.map((src, i) => (
           <div key={i} className="carousel-item w-full">
