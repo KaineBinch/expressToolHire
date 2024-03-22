@@ -1,82 +1,93 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slider from "../components/slider";
-import Map from "../components/googleMap";
 import PDF from "../utils/express_pricelist.pdf";
+import MobFoot from "../components/mobileFooter";
 
 const HomePage = () => {
   return (
     <>
       {/* Hero */}
       <div className="hero min-h-[65svh] bg-accent">
-        <div className="hero-content">
-          <div className="max-w-md">
-            <h1 className="md:text-6xl mt-[25px] text-5xl font-[ArialBlack]">
-              TOOL HIRE SPECIALISTS
+        <div className="flex items-center justify-center w-svw lg:w-[250px] ">
+          <div className="max-w-7xl mx-[10px]">
+            <h1 className="md:text-8xl mt-[25px] text-5xl text-center font-[ArialBlack] lg:pb-8">
+              TOOL HIRE <br /> SPECIALISTS
             </h1>
-            <p className="py-6 font- text-md">
-              Express Tool Hire Ltd offers a wide selection of tools and
-              equipment to meet your construction needs. With our competitive
-              prices and reliable service, you can trust us to provide the tools
-              you need to get the job done.
-            </p>
-            <a href="/#/products" className="btn btn-secondary text-white">
+            <div className="flex items-center justify-center lg:pb-8">
+              <p className="py-6 md:text-xl text-md">
+                Express Tool Hire Ltd offers a wide selection of tools and
+                equipment to meet your construction needs. With our competitive
+                prices and reliable service, you can trust us to provide the
+                tools you need to get the job done.
+              </p>
+            </div>
+            <a
+              href="/#/products"
+              className="btn btn-secondary text-white md:text-lg"
+            >
               Click to see our products{" "}
             </a>
           </div>
         </div>
       </div>
       <Slider />
-      <div className="min-h-[60svh] bg-accent md:flex md:flex-col md:max-w-7xl">
-        <div className="bg-accent pt-[40px] mr-[30px]">
-          <h1 className="text-3xl text-left ml-[10px] font-[ArialBlack] ">
-            Wide Selection of Quality Tools at Competitive Prices
-          </h1>
-          <p className="py-6 text-left ml-[10px]">
-            At Express Tool Hire Ltd, we offer a wide range of high-quality
-            tools and equipment for all your construction needs. With our
-            competitive pricing, you can get the tools you need without breaking
-            the bank.
-          </p>
-        </div>
-        {/* Info */}
-        <div className="flex md:flex-row flex-col">
-          <div className="text-left ml-[10px] mr-[30px]">
-            <h3 className="font-[arialBlack] text-xl">Wide Selection</h3>
-            <p className="text-left mt-[5px]">
-              Choose from a wide and extensive range of tools and equipment to
-              perfectly suit and cater to your specific and unique requirements
-              and needs.
-            </p>
-          </div>
-          <div className="text-left ml-[10px] mt-[20px] mr-[30px]">
-            <h3 className="font-[arialBlack] text-xl">Quality Tools</h3>
-            <p className="text-left mt-[5px]">
-              Our tools are of the highest quality, ensuring reliable
-              performance and durability.
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-1 ml-[10px] mt-[25px] pb-[25px]">
-          <a href="/#/about" className="btn btn-secondary text-white">
-            Learn More
-          </a>
-          <a href="/#/contact" className="flex items-center pl-4 ">
-            Contact us{" "}
-            <FontAwesomeIcon
-              icon="fa-solid fa-chevron-right"
-              className="ml-1 h-3 w-3"
-            />
-          </a>
-        </div>
-      </div>
       <div className="flex items-center justify-center">
-        <div className="m-5 max-h-[350px] max-w-[350px]">
-          <img
-            src="./src/assets/WackerPlate.png"
-            className="justify-content-center max-h-[350px] max-w-[350px]"
-          />
+        <div className="min-h-[60svh] bg-accent md:flex md:flex-col md:max-w-7xl">
+          <div className="bg-accent pt-[40px] mr-[30px]">
+            <h1 className="text-3xl text-left ml-[10px] font-[ArialBlack] ">
+              Wide Selection of Quality Tools at Competitive Prices
+            </h1>
+            <p className="py-6 text-left ml-[10px]">
+              At Express Tool Hire Ltd, we offer a wide range of high-quality
+              tools and equipment for all your construction needs. With our
+              competitive pricing, you can get the tools you need without
+              breaking the bank.
+            </p>
+          </div>
+          {/* Info */}
+          <div className="flex md:flex-row flex-col">
+            <div className="text-left ml-[10px] mr-[30px]">
+              <h3 className="font-[arialBlack] text-xl">Wide Selection</h3>
+              <p className="text-left mt-[5px]">
+                Choose from a wide and extensive range of tools and equipment to
+                perfectly suit and cater to your specific and unique
+                requirements and needs.
+              </p>
+            </div>
+            <div className="text-left ml-[10px] mt-[20px] mr-[30px]">
+              <h3 className="font-[arialBlack] text-xl">Quality Tools</h3>
+              <p className="text-left mt-[5px]">
+                Our tools are of the highest quality, ensuring reliable
+                performance and durability.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-1 ml-[10px] mt-[25px] pb-[25px]">
+            <a href="/#/about" className="btn btn-secondary text-white">
+              Learn More
+            </a>
+            <a
+              href="/#/contact"
+              className="flex items-center pl-4 md:items-start md:pt-3"
+            >
+              Contact us{" "}
+              <FontAwesomeIcon
+                icon="fa-solid fa-chevron-right"
+                className="ml-1 h-3 w-3"
+              />
+            </a>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="m-5 max-h-[350px] max-w-[350px]">
+              <img
+                src="./src/assets/WackerPlate.png"
+                className="justify-content-center max-h-[350px] max-w-[350px]"
+              />
+            </div>
+          </div>
         </div>
       </div>
+
       {/* Services Info */}
       <div className="min-h-[100svh] bg-accent md:flex md:flex-col md:max-w-7xl">
         <div className="text-left ml-[60px] pt-[40px]">
@@ -313,89 +324,7 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      {/* Footer */}
-      <div className="min-svh-[250px] bg-accent pt-10">
-        <div className="flex flex-col items-center justify-center">
-          <img className="" src="./src/assets/ExpressLogo.png" />
-        </div>
-        <div className="text-center pt-[40px]">
-          <h3 className="font-[arialBlack] text-4xl">Find Us</h3>
-          <p className="text-center mt-[5px] text-sm mx-[10px] pb-7">
-            Express Tool Hire LTD, Globe House, Colwick Road, Colwick,
-            Nottingham, NG2 4BG
-            <br />
-            <br />
-            Tel: 0115 941 9900
-            <br />
-            Email: info@expresstoolhire.co.uk
-          </p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <Map />
-        </div>
-        {/* Footer Links */}
-        <div className="text-center text-sm font-normal">
-          <div className="flex flex-col">
-            <div className="flex flex-row items-center justify-center ">
-              <a href="/#/about" className="mr-6 w-[125px]">
-                About Us
-              </a>
-              <a href="/#/faqs" className="ml-6 w-[125px]">
-                FAQs
-              </a>
-            </div>
-            <div className="flex flex-row items-center justify-center pt-8">
-              <a href="/#/" className="mr-6 w-[125px]">
-                Flo-Gas
-              </a>
-              <a href={PDF} className="ml-6 w-[125px]">
-                Rental Catalogue
-              </a>
-            </div>
-            <div className="flex flex-row items-center justify-center pt-8 pb-8">
-              <a href="/#/rental_policy" className="mr-6 w-[125px]">
-                Rental Policy
-              </a>
-              <a href="/#/" className="ml-6 w-[125px]">
-                Trade Hire
-              </a>
-            </div>
-          </div>
-        </div>
-        {/* Socials */}
-        <div className="flex justify-center mt-8 space-x-6">
-          <a href="#" className="text-gray-400 hover:text-gray-500">
-            <span className="sr-only ">Facebook</span>
-            <FontAwesomeIcon
-              className="w-6 h-6"
-              icon="fa-brands fa-square-facebook"
-            />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-gray-500">
-            <span className="sr-only">Instagram</span>
-            <FontAwesomeIcon
-              className="w-6 h-6"
-              icon="fa-brands fa-instagram"
-            />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-gray-500">
-            <span className="sr-only">LinkedIn</span>
-            <FontAwesomeIcon className="w-6 h-6" icon="fa-brands fa-linkedin" />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-gray-500">
-            <span className="sr-only">Phone</span>
-            <FontAwesomeIcon className="w-6 h-6" icon="fa-solid fa-phone" />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-gray-500">
-            <span className="sr-only">Email</span>
-            <FontAwesomeIcon className="w-6 h-6" icon="fa-solid fa-envelope" />
-          </a>
-        </div>
-        <hr className="border-1 border-neutral mt-6" />
-        <p className="mt-8 text-base leading-6 text-center text-neutral pb-10">
-          Copyright © 2024 Express Tool Hire Ltd
-        </p>
-      </div>
+      <MobFoot />
     </>
   );
 };

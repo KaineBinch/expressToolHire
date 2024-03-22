@@ -26,7 +26,7 @@ const Map = () => {
   }
 
   return (
-    <div className="pb-10">
+    <div className="">
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={17}
