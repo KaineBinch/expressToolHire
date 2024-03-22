@@ -31,7 +31,7 @@ const HomePage = () => {
         </div>
       </div>
       <Slider />
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <div className="min-h-[60svh] bg-accent md:flex md:flex-col md:max-w-7xl">
           <div className="bg-accent pt-[40px] mr-[30px]">
             <h1 className="text-3xl text-left ml-[10px] font-[ArialBlack] ">
@@ -77,7 +77,8 @@ const HomePage = () => {
               />
             </a>
           </div>
-          <div className="flex items-center justify-center">
+        </div>
+        <div className="flex items-center justify-center">
             <div className="m-5 max-h-[350px] max-w-[350px]">
               <img
                 src="./src/assets/WackerPlate.png"
@@ -85,9 +86,7 @@ const HomePage = () => {
               />
             </div>
           </div>
-        </div>
       </div>
-
       {/* Services Info */}
       <div className="min-h-[100svh] bg-accent md:flex md:flex-col md:max-w-7xl">
         <div className="text-left ml-[60px] pt-[40px]">
