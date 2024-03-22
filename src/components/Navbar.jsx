@@ -89,9 +89,9 @@ const Navbar = () => {
             <img src={OrangeLogo} className="pl-1 max-w-[50px] max-h-[30px]" />
           </div>
 
-          <h1 className="md:invisible visible flex items-end justify-end text-sm font-normal text-white pr-3">
+          <a href="tel:01159419900" className="md:invisible visible flex z-10 items-end justify-end text-sm font-normal text-white pr-3">
             0115 941 9900
-          </h1>
+          </a>
         </div>
         <div className="md:invisible visible absolute w-full left-0 flex items-center justify-center">
           <Logo />
