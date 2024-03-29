@@ -44,7 +44,7 @@ const Navbar = () => {
           <div className="dropdown visible md:invisible justify-center items-center z-10 md:w-0 w-auto pt-2">
             <label
               tabIndex={0}
-              className="btn btn-ghost rounded-t-md btn-square text-white justify-center items-center "
+              className="btn btn-ghost rounded-md btn-square text-white justify-center items-center "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ const Navbar = () => {
             <div className="flex place-content-evenly">
               <ul
                 tabIndex={0}
-                className="menu dropdown-content ml-[90px] mt-[25px] p-4 shadow bg-secondary rounded-box w-[150px] font-bold"
+                className="menu dropdown-content bg-opacity-80 ml-[90px] mt-[25px] p-4 shadow bg-secondary rounded-box w-[150px] font-bold"
               >
                 {links.map(({ title, to }) => LinkItem(title, to, location, 5))}
               </ul>
@@ -89,7 +89,10 @@ const Navbar = () => {
             <img src={OrangeLogo} className="pl-1 max-w-[50px] max-h-[30px]" />
           </div>
 
-          <a href="tel:01159419900" className="md:invisible visible flex z-10 items-end justify-end text-sm font-normal text-white pr-3">
+          <a
+            href="tel:01159419900"
+            className="md:invisible visible flex z-10 items-end justify-end text-sm font-normal text-white pr-3"
+          >
             0115 941 9900
           </a>
         </div>
