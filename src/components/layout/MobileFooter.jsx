@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Map from "../components/googleMap";
-import PDF from "../utils/express_pricelist.pdf";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Map from "../googleMap"
+import PDF from "../../utils/express_pricelist.pdf"
 
 const MobFoot = () => {
   return (
@@ -89,13 +89,12 @@ const MobFoot = () => {
             href={"https://kainebinch.dev"}
             target="_blank"
             rel="noreferrer"
-            className="btn btn-ghost pt-4"
-          >
+            className="btn btn-ghost pt-4">
             Web Design
           </a>
         </p>
       </div>
     </>
-  );
-};
-export default MobFoot;
+  )
+}
+export default MobFoot

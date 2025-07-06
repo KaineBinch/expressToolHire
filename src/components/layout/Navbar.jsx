@@ -1,10 +1,10 @@
-import { Link, useLocation } from "react-router-dom";
-import HAE from "../assets/HAElogo.png";
-import OrangeLogo from "../assets/SafeHireLogo.png";
-import Logo from "./Logo";
+import { Link, useLocation } from "react-router-dom"
+import HAE from "../../assets/HAElogo.png"
+import OrangeLogo from "../../assets/SafeHireLogo.png"
+import Logo from "../Logo"
 
 const Navbar = () => {
-  const location = useLocation().pathname;
+  const location = useLocation().pathname
   const links = [
     { title: "Home", to: "/" },
     { title: "About", to: "/about" },
@@ -12,14 +12,14 @@ const Navbar = () => {
     { title: "FAQs", to: "/faqs" },
     { title: "Rental Policy", to: "/rental_policy" },
     { title: "Contact", to: "/contact" },
-  ];
+  ]
   const loseActiveFocus = () => {
-    const elem = document.activeElement;
-    if (elem) elem.blur();
-  };
+    const elem = document.activeElement
+    if (elem) elem.blur()
+  }
 
   const LinkItem = (title, to, location, my = 1) => {
-    const activeClasses = location === to ? "bg-secondary" : "";
+    const activeClasses = location === to ? "bg-secondary" : ""
     return (
       <li
         key={title}
@@ -28,14 +28,13 @@ const Navbar = () => {
         style={{
           marginTop: my,
           marginBottom: my,
-        }}
-      >
+        }}>
         <Link to={to} className="text-center text-white inline">
           {title}
         </Link>
       </li>
-    );
-  };
+    )
+  }
 
   return (
     <div className="w-screen flex bg-primary justify-center border-b-[20px] border-secondary">
@@ -44,27 +43,23 @@ const Navbar = () => {
           <div className="dropdown visible md:invisible justify-center items-center z-10 md:w-0 w-auto pt-2">
             <label
               tabIndex={0}
-              className="btn btn-ghost rounded-md btn-square text-white justify-center items-center "
-            >
+              className="btn btn-ghost rounded-md btn-square text-white justify-center items-center ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill=""
                 viewBox="3 3 20 20"
-                className="inline-block w-5 h-5 stroke-current"
-              >
+                className="inline-block w-5 h-5 stroke-current">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
+                  d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </label>
             <div className="flex place-content-evenly">
               <ul
                 tabIndex={0}
-                className="menu dropdown-content bg-opacity-80 ml-[90px] mt-[25px] p-4 shadow bg-secondary rounded-box w-[150px] font-bold"
-              >
+                className="menu dropdown-content bg-opacity-80 ml-[90px] mt-[25px] p-4 shadow bg-secondary rounded-box w-[150px] font-bold">
                 {links.map(({ title, to }) => LinkItem(title, to, location, 5))}
               </ul>
             </div>
@@ -91,8 +86,7 @@ const Navbar = () => {
 
           <a
             href="tel:01159419900"
-            className="md:invisible visible flex z-10 items-end justify-end text-sm font-normal text-white pr-3"
-          >
+            className="md:invisible visible flex z-10 items-end justify-end text-sm font-normal text-white pr-3">
             0115 941 9900
           </a>
         </div>
@@ -106,7 +100,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

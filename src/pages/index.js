@@ -1,9 +1,17 @@
-import NotFound from "./notFound";
-import HomePage from "./homePage";
-import AboutPage from "./aboutPage";
-import ProductsPage from "./productsPage"
-import FaqsPage from "./faqsPage"
-import RentalPolicyPage from "./rentalPolicyPage";
-import ContactPage from "./contactPage";
+import NotFound from "./NotFound";
+import HomePage from "./HomePage";
+import AboutPage from "./AboutPage";
+import ProductsPage from "./ProductsPage";
+import FaqsPage from "./FaqsPage";
+import RentalPolicyPage from "./RentalPolicyPage";
+import ContactPage from "./ContactPage";
 
-export { NotFound, HomePage, AboutPage, ProductsPage, FaqsPage, RentalPolicyPage, ContactPage, }
+export {
+  NotFound,
+  HomePage,
+  AboutPage,
+  ProductsPage,
+  FaqsPage,
+  RentalPolicyPage,
+  ContactPage
+};
